@@ -1,4 +1,5 @@
 import { Flex, Box, SimpleGrid, Spacer, Text } from "@chakra-ui/react";
+import PieChart from "../charts/PieChart";
 import Badge from "../UI/Badge";
 import Card from "../UI/Card";
 import StatusCard from "../UI/StatusCard";
@@ -6,10 +7,11 @@ import StatusCard from "../UI/StatusCard";
 const CycleTime = () => {
   return (
     <Card title={"Cycle time"} w="100%" height="274px">
-      <SimpleGrid columns={2}>
+      <SimpleGrid columns={1}>
         <Flex alignItems={"flex-end"}>
           <Badge type={true} text="24%" />
-          <Flex
+          <PieChart />
+          {/* <Flex
             h="135px"
             w="135px"
             borderWidth={"20px"}
@@ -21,7 +23,7 @@ const CycleTime = () => {
             my="24px"
             alignItems={"center"}
             justifyContent="center"
-            textAlign={'center'}
+            textAlign={"center"}
           >
             <Box>
               <Text fontWeight="700">17 hrs</Text>
@@ -29,9 +31,9 @@ const CycleTime = () => {
                 Average across 50 tickets in 4 weeks
               </Text>
             </Box>
-          </Flex>
+          </Flex> */}
         </Flex>
-        <Box>
+        {/* <Box>
           <StatusCard text="Coding" color="brand.green.100" percent="4hrs" />
           <Spacer height={"17px"} />
           <StatusCard text="Code Review" color="brand.200" percent="8hrs" />
@@ -49,7 +51,7 @@ const CycleTime = () => {
             color="brand.purple.100"
             percent="1hr"
           />
-        </Box>
+        </Box> */}
       </SimpleGrid>
     </Card>
   );

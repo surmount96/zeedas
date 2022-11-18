@@ -2,11 +2,18 @@ import React from "react";
 import { Box, Text, Flex } from "@chakra-ui/react";
 import { InfoIcon } from "../../assets/svg";
 
-const Card = ({ w, title, children, height = "auto", option }) => {
+const Card = ({ w, title, children, height = "auto", option, mb = "25px" }) => {
   return (
-    <Box bg="white" p="16px" borderRadius={"8px"} w={w} h={height}>
+    <Box
+      bg="white"
+      p="16px"
+      mb={{ base: 3, md: 3, lg: 0 }}
+      borderRadius={"8px"}
+      w={w}
+      h={height}
+    >
       <Flex
-        mb="25px"
+        mb={mb}
         pb="16px"
         borderBottomWidth={"1px"}
         borderBottomColor="brand.170"

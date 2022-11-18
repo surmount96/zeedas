@@ -3,7 +3,7 @@ import { extendTheme } from "@chakra-ui/react";
 const CC = {
   fonts: {
     heading: '"Inter"',
-    body: '"Open Sans",sans-serif',
+    body: '"Nunito Sans",sans-serif',
     mono: "Menlo, monospace",
   },
   fontSizes: {

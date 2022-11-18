@@ -4,28 +4,44 @@ import StatusCard from "../UI/StatusCard";
 
 const WorkBreakdown = () => {
   return (
-    <Card title={"Work breakdown"} w="100%" height="264px">
+    <Card
+      title={"Work breakdown"}
+      w="100%"
+      height={{ base: "auto", md: "auto", lg: "264px" }}
+    >
       <Flex alignItems="center">
         <Box ml="">
-          <Text fontSize={"lg"} fontWeight="700">
+          <Text fontSize={"lg"} fontWeight="700" fontFamily="Futura">
             968{" "}
-            <Text as="span" fontWeight="400" fontSize={"sm"} color="brand.150">
+            <Text
+              as="span"
+              fontWeight="400"
+              fontSize={"sm"}
+              color="brand.150"
+              fontFamily="Nunito sans"
+            >
               lines
             </Text>
           </Text>
         </Box>
         <Box mx="24px">
-          <Text fontSize={"lg"} fontWeight="700">
+          <Text fontSize={"lg"} fontWeight="700" fontFamily="Futura">
             54{" "}
-            <Text as="span" fontWeight="400" fontSize={"sm"} color="brand.150">
+            <Text
+              as="span"
+              fontWeight="400"
+              fontSize={"sm"}
+              color="brand.150"
+              fontFamily="Nunito sans"
+            >
               tickets
             </Text>
           </Text>
         </Box>
         <Box>
-          <Text fontSize={"lg"} fontWeight="700">
+          <Text fontSize={"lg"} fontWeight="700" fontFamily="Futura">
             4{" "}
-            <Text as="span" fontWeight="400" fontSize={"sm"} color="brand.150">
+            <Text as="span" fontWeight="400" fontSize={"sm"} color="brand.150" fontFamily="Nunito sans">
               total weeks worked
             </Text>
           </Text>

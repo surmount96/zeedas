@@ -4,17 +4,18 @@ import Badge from "../UI/Badge";
 
 const AverageUI = () => {
   return (
-    <SimpleGrid columns={2} spacingX="5" mb="16px">
+    <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacingX="5" mb="16px">
       <Card title={"Average PR size"} w="100%">
         <Flex alignItems="center">
           <Box ml="">
-            <Text fontSize={"lg"} fontWeight="700">
+            <Text fontSize={"lg"} fontWeight="700" fontFamily={'Futura'}>
               968{" "}
               <Text
                 as="span"
                 fontWeight="400"
                 fontSize={"sm"}
                 color="brand.150"
+                fontFamily={'Nunito sans'}
               >
                 lines
               </Text>
@@ -24,13 +25,14 @@ const AverageUI = () => {
             </Text>
           </Box>
           <Box>
-            <Text fontSize={"lg"} fontWeight="700">
+            <Text fontSize={"lg"} fontWeight="700" fontFamily={'Futura'}>
               240{" "}
               <Text
                 as="span"
                 fontWeight="400"
                 fontSize={"sm"}
                 color="brand.150"
+                fontFamily={'Nunito sans'}
               >
                 kb
               </Text>
@@ -46,13 +48,14 @@ const AverageUI = () => {
       <Card title={"Average ticket duration"} w="100%" height="200px">
         <Flex justifyContent={"space-between"} alignItems="center">
           <Box>
-            <Text fontSize={"lg"} fontWeight="700">
+            <Text fontSize={"lg"} fontWeight="700" fontFamily={'Futura'}>
               36{" "}
               <Text
                 as="span"
                 fontWeight="400"
                 fontSize={"sm"}
                 color="brand.150"
+                fontFamily={'Nunito sans'}
               >
                 hours
               </Text>

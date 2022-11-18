@@ -10,11 +10,11 @@ import Planning from "../../components/Planning";
 const Home = () => {
   return (
     <>
-      <Text fontWeight={800}>Project stats</Text>
+      <Text fontWeight={700} fontFamily="Futura">Project stats</Text>
       <Flex justifyContent={"flex-end"}>
         <MenuDropdown />
       </Flex>
-      <SimpleGrid columns={2} spacingX="5" mt="27px" w="100%">
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacingX="5" mt="27px" w="100%">
         <Box>
           <AverageUI />
           <CycleTime />

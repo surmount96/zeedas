@@ -18,8 +18,11 @@ import {
   SearchBoxIcon,
 } from "../../../assets/svg";
 import { sidebarList } from "../../../constant/sidebarList";
+import { useToggle } from "../../../hooks/useToggle";
 
 const Sidebar = ({ show, setShow }) => {
+  const { isOpen, toggle } = useToggle();
+
   return (
     <Flex pos={"fixed"}>
       <IconSidebar show={show} setShow={setShow} />
@@ -55,6 +58,9 @@ const Sidebar = ({ show, setShow }) => {
               h="32px"
               rounded={"10px"}
               mb="24px"
+              w="172px"
+              display={'flex'}
+              justifyContent="space-between"
               rightIcon={<ArrowDownIcon />}
             >
               Product dev
@@ -67,39 +73,60 @@ const Sidebar = ({ show, setShow }) => {
                 key={list.title}
                 alignItems="center"
                 justifyContent={"space-between"}
-                
                 cursor={"pointer"}
+                onClick={() => {
+                  list?.children?.length > 0 && toggle();
+                }}
               >
                 <Box>
                   <Text
                     fontWeight={600}
                     fontSize="md"
                     color={
-                      list.title === "Overview" ? "brand.200" : "brand.150"
+                      isOpen && list?.children?.length > 0
+                        ? "brand.200"
+                        : "brand.150"
                     }
                     mb="12px"
                   >
                     {list.title}
                   </Text>
                 </Box>
-                {list?.children?.length > 0 && <ClosedIcon />}
+                {list?.children?.length > 0 && (
+                  <Box mb="12px">
+                    <ClosedIcon />
+                  </Box>
+                )}
               </Flex>
 
-              {list?.children?.length > 0 && (
+              {isOpen && list?.children?.length > 0 && (
                 <Box
                   borderLeftWidth={"1px"}
                   borderLeftColor="brand.160"
-                  px="16px"
-                 
+                  transition="all .2s"
+                  // w="180px"
                 >
                   {list.children?.map((sub) => (
                     <Text
                       key={sub.name}
                       fontWeight={600}
                       fontSize="md"
+                      cursor={"pointer"}
                       color={
                         sub.name === "Project stats" ? "brand.200" : "brand.150"
                       }
+                      px="16px"
+                      borderLeftWidth={
+                        sub.name === "Project stats" ? "2px" : "0"
+                      }
+                      borderLeftColor="brand.200"
+                      _hover={{
+                        borderLeftColor: "brand.200",
+                        borderLeftWidth:'2px',
+                        color: "brand.200",
+                        transition:'all .1s'
+                      }}
+                      ml="-0.3px"
                       mb="12px"
                     >
                       {sub.name}
