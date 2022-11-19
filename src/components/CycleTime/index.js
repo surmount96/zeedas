@@ -1,8 +1,7 @@
-import { Flex, Box, SimpleGrid, Spacer, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, } from "@chakra-ui/react";
 import PieChart from "../charts/PieChart";
 import Badge from "../UI/Badge";
 import Card from "../UI/Card";
-import StatusCard from "../UI/StatusCard";
 
 const CycleTime = () => {
   return (

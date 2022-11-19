@@ -13,7 +13,7 @@ function Layout() {
         <Sidebar setShow={setShow} show={show} />
       </Box>
 
-      <Box px="45" flexGrow="1">
+      <Box px={{ base: 5, md: "45" }} flexGrow="1">
         <TopNav />
         <Home />
       </Box>

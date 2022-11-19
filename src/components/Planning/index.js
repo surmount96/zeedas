@@ -10,7 +10,7 @@ const Planning = () => {
         <Text fontWeight={800}>Planning</Text>
         <MenuDropdown />
       </Flex>
-      <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacingX="5">
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacingX="5">
         <Card title={"New Features added"} mb="5px">
           <Flex alignItems="center">
             <Text fontSize={"lg"} fontWeight="700" fontFamily="Futura">

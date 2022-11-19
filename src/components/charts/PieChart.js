@@ -5,32 +5,54 @@ const PieChart = (type = "bar", width = "150") => {
     chart: {
       type: "bar",
     },
-    labels: ["4hrs Coding",'8hrs  Code Review','1hrs  QA Review ','3hrs  Idle Time ','1hr  Deployment'],
+    labels: [
+      "4hrs Coding",
+      "8hrs  Code Review",
+      "1hrs  QA Review ",
+      "3hrs  Idle Time ",
+      "1hr  Deployment",
+    ],
     dataLabels: {
       enabled: false,
+      style: {
+       
+      },
+    },
+    stroke: {
+      width: 4,
+      colors: ['transparent']
+    },
+    legend: {
+      fontSize: "14px",
+      fontFamily: "Nunito sans",
+      marginBottom:'14px',margin:0
     },
     toolbar: {
-        show: false,
+      show: false,
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          labels: {
+            show: true,
+            // name: "17 hrs",
+            // value: "Average across 50 tickets in 4 weeks",
+            // total: {
+            //   showAlways: true,
+            //   show: true
+            // }
+          },
+        },
       },
-      plotOptions: {
-        pie: {
-          donut: {
-            labels: {
-              show: true,
-              name: '17 hrs',
-              value: 'Average across 50 tickets in 4 weeks'
-            }
-          }
-        }
-      },
+    },
     //   fill: { colors: ['red', 'green', 'yellow'] },
-    colors: ['#4DBD98', '#23B3E8', '#03293D', '#F15832', '#826AF9'],
+    colors: ["#4DBD98", "#23B3E8", "#03293D", "#F15832", "#826AF9"],
     responsive: [
       {
         breakpoint: 480,
         options: {
           chart: {
-            width: 400,
+            width: 250,
           },
           legend: {
             position: "bottom",
