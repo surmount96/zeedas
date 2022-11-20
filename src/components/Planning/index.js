@@ -7,7 +7,7 @@ const Planning = () => {
   return (
     <Box>
       <Flex alignItems={"center"} justifyContent="space-between" mb="16px">
-        <Text fontWeight={800}>Planning</Text>
+        <Text fontWeight={700} fontFamily="Futura">Planning</Text>
         <MenuDropdown />
       </Flex>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacingX="5">

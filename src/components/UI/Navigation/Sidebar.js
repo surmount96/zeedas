@@ -24,7 +24,7 @@ const Sidebar = ({ show, setShow }) => {
   const { isOpen, toggle } = useToggle();
 
   return (
-    <Flex pos={"fixed"}>
+    <Flex pos={"fixed"} zIndex={999}>
       <IconSidebar show={show} setShow={setShow} />
       {show && (
         <Box
@@ -35,8 +35,16 @@ const Sidebar = ({ show, setShow }) => {
           h="100vh"
           px="24px"
           pt="34px"
+          
         >
-          <Flex alignItems={"center"} mb="12px">
+          <Flex
+            alignItems={"center"}
+            mb="12px"
+            onClick={() => {
+              setShow(!show);
+            }}
+            cursor="pointer"
+          >
             <ArrowLeftIcon />
             <Flex alignItems={"center"} ml="18px">
               <Image src="https://res.cloudinary.com/kingstech/image/upload/v1667938809/icon_ppykyo.png" />
@@ -59,7 +67,7 @@ const Sidebar = ({ show, setShow }) => {
               rounded={"10px"}
               mb="24px"
               w="172px"
-              display={'flex'}
+              display={"flex"}
               justifyContent="space-between"
               rightIcon={<ArrowDownIcon />}
             >
@@ -122,9 +130,9 @@ const Sidebar = ({ show, setShow }) => {
                       borderLeftColor="brand.200"
                       _hover={{
                         borderLeftColor: "brand.200",
-                        borderLeftWidth:'2px',
+                        borderLeftWidth: "2px",
                         color: "brand.200",
-                        transition:'all .1s'
+                        transition: "all .1s",
                       }}
                       ml="-0.3px"
                       mb="12px"

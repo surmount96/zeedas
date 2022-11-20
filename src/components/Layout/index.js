@@ -9,11 +9,14 @@ function Layout() {
 
   return (
     <Flex bg="brand.gray.100">
-      <Box w={show ? "300px" : "80px"} transition={"all .4s"}>
+      <Box
+        w={show ? { base: "", md: "320px" } : { base: "130px", md: "80px" }}
+        transition={"all .4s"}
+      >
         <Sidebar setShow={setShow} show={show} />
       </Box>
 
-      <Box px={{ base: 5, md: "45" }} flexGrow="1">
+      <Box px={{ base: 5, md: "45px" }} flexGrow="1">
         <TopNav />
         <Home />
       </Box>

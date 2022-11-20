@@ -1,5 +1,5 @@
 import Chart from "react-apexcharts";
-const PieChart = (type = "bar", width = "150") => {
+const PieChart = () => {
   const options = {
     chart: {
       type: "bar",
@@ -51,7 +51,7 @@ const PieChart = (type = "bar", width = "150") => {
         breakpoint: 480,
         options: {
           chart: {
-            width: 250,
+            width: 200,
           },
           legend: {
             position: "bottom",
@@ -68,7 +68,7 @@ const PieChart = (type = "bar", width = "150") => {
         options={options}
         series={series}
         type="donut"
-        // height="120"
+        height={620}
         width={340}
       />
     </>
