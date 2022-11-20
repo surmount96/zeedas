@@ -34,7 +34,7 @@ const PieChart = (type = "bar", width = "150") => {
       pie: {
         donut: {
           labels: {
-            show: true,
+            show: false,
             // name: "17 hrs",
             // value: "Average across 50 tickets in 4 weeks",
             // total: {
