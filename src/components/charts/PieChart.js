@@ -1,5 +1,4 @@
 import Chart from "react-apexcharts";
-import { Text } from "@chakra-ui/react";
 const PieChart = (type = "bar", width = "150") => {
   const options = {
     chart: {
